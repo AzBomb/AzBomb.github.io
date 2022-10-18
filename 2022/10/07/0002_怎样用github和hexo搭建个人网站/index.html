@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh-CN">
     <head>
     <meta charset="utf-8">
     <!--
@@ -149,10 +149,10 @@
     
 
 
-    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="AzBomb的博客"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="AzBomb的博客"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="AzBomb的博客"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="AzBomb的博客"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="search" type="application/opensearchdescription+xml" href="path/to/opensearch.xml" title="AzBomb的博客">
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="怎样用 Github 和 Hexo 搭建个人网站 | AzBomb的博客"><meta property="og:site_name" content="AzBomb的博客"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"><meta property="og:locale" content="zh"><meta name="description" content="欢迎来到 AzBomb 的博客! 为什么是Github搞一个完全属于自己的网站，首先要有个服务器，一般要么自己搭，要么买云服务，这两者多少都要花些银子。Github 对于刚开始搞网站的伙伴们刚刚好，一个完全公开化的免费服务器，如果有更高的需求还可以付费私有化。网上教程挺多的，也不需要太复杂的知识储备，当然 Github暂时还没有官方中文支持，且有些配置要用到 shell 命令行操作，入坑的小伙伴要 - Azbomb - AzBomb的博客"><meta name="keywords" content="Github, Hexo，网站，搭建, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta property="og:image" content="http://example.com/img/0002/github_rep_name.jpg"><meta property="og:image" content="http://example.com/img/0002/hello_world.jpg"><meta property="og:image" content="http://example.com/img/0002/hexo_dir_tree.jpg"><meta property="article:published_time" content="2022-10-07T06:37:58.000Z"><meta property="article:modified_time" content="2022-10-18T10:00:24.570Z"><meta property="og:updated_time" content="2022-10-18T10:00:24.570Z"><meta property="article:author" content="Azbomb"><meta property="article:tag" content="Github, Hexo，网站，搭建, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta name="twitter:card" content="summary">
+    <meta property="og:title" content="怎样用 Github 和 Hexo 搭建个人网站 | AzBomb的博客"><meta property="og:site_name" content="AzBomb的博客"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"><meta property="og:locale" content="zh-CN"><meta name="description" content="欢迎来到 AzBomb 的博客! 为什么是Github搞一个完全属于自己的网站，首先要有个服务器，一般要么自己搭，要么买云服务，这两者多少都要花些银子。Github 对于刚开始搞网站的伙伴们刚刚好，一个完全公开化的免费服务器，如果有更高的需求还可以付费私有化。网上教程挺多的，也不需要太复杂的知识储备，当然 Github暂时还没有官方中文支持，且有些配置要用到 shell 命令行操作，入坑的小伙伴要 - Azbomb - AzBomb的博客"><meta name="keywords" content="Github, Hexo，网站，搭建, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta property="og:image" content="http://example.com/img/0002/github_rep_name.jpg"><meta property="og:image" content="http://example.com/img/0002/hello_world.jpg"><meta property="og:image" content="http://example.com/img/0002/hexo_dir_tree.jpg"><meta property="article:published_time" content="2022-10-07T06:37:58.000Z"><meta property="article:modified_time" content="2022-10-18T10:00:24.570Z"><meta property="og:updated_time" content="2022-10-18T10:00:24.570Z"><meta property="article:author" content="Azbomb"><meta property="article:tag" content="Github, Hexo，网站，搭建, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta name="twitter:card" content="summary">
 
     
 
@@ -201,7 +201,7 @@
             "@type": "ImageObject",
             "url": "http://example.com/img/default_avatar.png"
         },
-        "description": "Hi, nice to meet you."
+        "description": "学好自动化，浪迹走天涯"
     },
     "publisher": {
         "@type": "Organization",
@@ -214,7 +214,7 @@
     
     "potentialAction": {
         "@type": "SearchAction",
-        "target": "http://example.com/search?s={search_term_string}",
+        "target": "http://example.com/?s={search_term_string}",
         "query-input": "required name=search_term_string"
     },
     
@@ -240,74 +240,58 @@
     <p class="text-center header-slogan">
         
             
-                Hi, nice to meet you.
+                学好自动化，浪迹走天涯
             
         
     </p>
 
     <nav class="navbar-section text-center">
     
-        <a href="/" class="navbar-link">Home</a>
+        <a href="/" class="navbar-link">首页</a>
     
     
-        <a href="/archives/" class="navbar-link">Archives</a>
+        <a href="/archives/" class="navbar-link">归档</a>
     
     
-        <a href="/search" class="navbar-link">Search</a>
+        <a href="" class="navbar-link">搜索</a>
     
+    
+        <a href="/about/" class="navbar-link">about</a>
+    
+        <a href="/tags/" class="navbar-link">tag</a>
     
     
         <div class="dropdown dropdown-right">
-    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
     <ul class="menu share-menu">
 
         <!-- Share Weibo -->
         
         <li class="menu-item">
-            <a href="http://service.weibo.com/share/share.php?appkey=&title=AzBomb的博客&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=AzBomb的博客&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
         </li>
         
 
         <!-- Share Twitter -->
         
-        <li class="menu-item">
-            <a href="https://twitter.com/intent/tweet?text=AzBomb的博客&url=http://example.com&via=Azbomb" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
-        </li>
-        
 
         <!-- Share Facebook -->
-        
-        <li class="menu-item">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
-        </li>
         
 
         <!-- Share Google+ -->
         
-        <li class="menu-item">
-            <a href="https://plus.google.com/share?url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
-        </li>
-        
 
         <!-- Share LinkedIn -->
-        
-        <li class="menu-item">
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com&title=怎样用 Github 和 Hexo 搭建个人网站" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
-        </li>
         
 
         <!-- Share QQ -->
         
         <li class="menu-item">
-            <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=怎样用 Github 和 Hexo 搭建个人网站&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=怎样用 Github 和 Hexo 搭建个人网站&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
         </li>
         
 
         <!-- Share Telegram -->
-        
-        <li class="menu-item">
-            <a href="https://t.me/share/url?url=http://example.com&text=怎样用 Github 和 Hexo 搭建个人网站" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
-        </li>
         
 
         <!-- QRCode -->
@@ -358,55 +342,35 @@
     <div class="post-header-info-right">
         
             <div class="dropdown dropdown-right">
-<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<a class="dropdown-toggle" tabindex="0">分享本文</a>
 <ul class="menu share-menu">
     <!-- Share Weibo -->
     
     <li class="menu-item">
-        <a href="http://service.weibo.com/share/share.php?appkey=&title=怎样用 Github 和 Hexo 搭建个人网站&url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=怎样用 Github 和 Hexo 搭建个人网站&url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
     </li>
     
 
     <!-- Share Twitter -->
     
-    <li class="menu-item">
-        <a href="https://twitter.com/intent/tweet?text=怎样用 Github 和 Hexo 搭建个人网站&url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&via=Azbomb" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
-    </li>
-    
 
     <!-- Share Facebook -->
-    
-    <li class="menu-item">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
-    </li>
     
 
     <!-- Share Google+ -->
     
-    <li class="menu-item">
-        <a href="https://plus.google.com/share?url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
-    </li>
-    
 
     <!-- Share LinkedIn -->
-    
-    <li class="menu-item">
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&title=AzBomb的博客" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
-    </li>
     
 
     <!-- Share QQ -->
     
     <li class="menu-item">
-        <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=AzBomb的博客&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=AzBomb的博客&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
     </li>
     
 
     <!-- Share Telegram -->
-    
-    <li class="menu-item">
-        <a href="https://t.me/share/url?url=http://example.com/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&text=AzBomb的博客" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
-    </li>
     
 
     <!-- QRCode -->
@@ -533,7 +497,7 @@ Hexo 博客网站搭建就分享到这，刚搭建完的网站，是不是觉得
                     
 
 
-    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
     <script>
     (function() {
         var dateUpdate = Date.parse("2022-10-18");
@@ -550,9 +514,9 @@ Hexo 博客网站搭建就分享到这，刚搭建完的网站，是不是觉得
     </script>
 
 
-<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2022-10-07T06:37:58.000Z" itemprop="datePublished">2022-10-07</time>
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-10-07T06:37:58.000Z" itemprop="datePublished">2022-10-07</time>
 
-    , Updated at&nbsp;<time datetime="2022-10-18T10:00:24.570Z" itemprop="dateModified">2022-10-18</time>
+    , 最后修改于&nbsp;<time datetime="2022-10-18T10:00:24.570Z" itemprop="dateModified">2022-10-18</time>
 
 </p>
 <p class="post-footer-info mb-0 pt-2">
@@ -641,7 +605,17 @@ window.lazyLoadOptions = {
     elements_selector: ".lazyload",
     threshold: 50
 };
-document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2022;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
 console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
 
 </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh-CN">
     <head>
     <meta charset="utf-8">
     <!--
@@ -149,10 +149,10 @@
     
 
 
-    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="AzBomb的博客"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="AzBomb的博客"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="AzBomb的博客"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="AzBomb的博客"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="search" type="application/opensearchdescription+xml" href="path/to/opensearch.xml" title="AzBomb的博客">
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="开天辟地第一篇 | AzBomb的博客"><meta property="og:site_name" content="AzBomb的博客"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/"><meta property="og:locale" content="zh"><meta name="description" content="欢迎来到 AzBomb的博客! 开篇为什么建站本人一名80后自动化小蚁，在自动化行业已十年有余，一直想写点行业相关的笔记与心得，分享给大家，由于种种原因，很长时间都没能实现。近期机缘巧合从 IT 朋友处了解到可以在 Github 上实现个人博客网站，还有资金投入几乎为零，只不过要学习怎么搭建网站。 好，从网上找资料，干就完了！ 感谢由于能力有限，用自控人的思想，开局能跑就 OK，等日后有了新技能和 - Azbomb - AzBomb的博客"><meta name="keywords" content="自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta property="article:published_time" content="2022-10-06T13:37:58.000Z"><meta property="article:modified_time" content="2022-10-18T09:15:49.284Z"><meta property="og:updated_time" content="2022-10-18T09:15:49.284Z"><meta property="article:author" content="Azbomb"><meta property="article:tag" content="自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta name="twitter:card" content="summary">
+    <meta property="og:title" content="开天辟地第一篇 | AzBomb的博客"><meta property="og:site_name" content="AzBomb的博客"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/"><meta property="og:locale" content="zh-CN"><meta name="description" content="欢迎来到 AzBomb的博客! 开篇为什么建站本人一名80后自动化小蚁，在自动化行业已十年有余，一直想写点行业相关的笔记与心得，分享给大家，由于种种原因，很长时间都没能实现。近期机缘巧合从 IT 朋友处了解到可以在 Github 上实现个人博客网站，还有资金投入几乎为零，只不过要学习怎么搭建网站。 好，从网上找资料，干就完了！ 感谢由于能力有限，用自控人的思想，开局能跑就 OK，等日后有了新技能和 - Azbomb - AzBomb的博客"><meta name="keywords" content="自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta property="article:published_time" content="2022-10-06T13:37:58.000Z"><meta property="article:modified_time" content="2022-10-18T09:15:49.284Z"><meta property="og:updated_time" content="2022-10-18T09:15:49.284Z"><meta property="article:author" content="Azbomb"><meta property="article:tag" content="自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta name="twitter:card" content="summary">
 
     
 
@@ -201,7 +201,7 @@
             "@type": "ImageObject",
             "url": "http://example.com/img/default_avatar.png"
         },
-        "description": "Hi, nice to meet you."
+        "description": "学好自动化，浪迹走天涯"
     },
     "publisher": {
         "@type": "Organization",
@@ -214,7 +214,7 @@
     
     "potentialAction": {
         "@type": "SearchAction",
-        "target": "http://example.com/search?s={search_term_string}",
+        "target": "http://example.com/?s={search_term_string}",
         "query-input": "required name=search_term_string"
     },
     
@@ -240,74 +240,58 @@
     <p class="text-center header-slogan">
         
             
-                Hi, nice to meet you.
+                学好自动化，浪迹走天涯
             
         
     </p>
 
     <nav class="navbar-section text-center">
     
-        <a href="/" class="navbar-link">Home</a>
+        <a href="/" class="navbar-link">首页</a>
     
     
-        <a href="/archives/" class="navbar-link">Archives</a>
+        <a href="/archives/" class="navbar-link">归档</a>
     
     
-        <a href="/search" class="navbar-link">Search</a>
+        <a href="" class="navbar-link">搜索</a>
     
+    
+        <a href="/about/" class="navbar-link">about</a>
+    
+        <a href="/tags/" class="navbar-link">tag</a>
     
     
         <div class="dropdown dropdown-right">
-    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
     <ul class="menu share-menu">
 
         <!-- Share Weibo -->
         
         <li class="menu-item">
-            <a href="http://service.weibo.com/share/share.php?appkey=&title=AzBomb的博客&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=AzBomb的博客&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
         </li>
         
 
         <!-- Share Twitter -->
         
-        <li class="menu-item">
-            <a href="https://twitter.com/intent/tweet?text=AzBomb的博客&url=http://example.com&via=Azbomb" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
-        </li>
-        
 
         <!-- Share Facebook -->
-        
-        <li class="menu-item">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
-        </li>
         
 
         <!-- Share Google+ -->
         
-        <li class="menu-item">
-            <a href="https://plus.google.com/share?url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
-        </li>
-        
 
         <!-- Share LinkedIn -->
-        
-        <li class="menu-item">
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com&title=开天辟地第一篇" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
-        </li>
         
 
         <!-- Share QQ -->
         
         <li class="menu-item">
-            <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=开天辟地第一篇&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=开天辟地第一篇&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
         </li>
         
 
         <!-- Share Telegram -->
-        
-        <li class="menu-item">
-            <a href="https://t.me/share/url?url=http://example.com&text=开天辟地第一篇" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
-        </li>
         
 
         <!-- QRCode -->
@@ -358,55 +342,35 @@
     <div class="post-header-info-right">
         
             <div class="dropdown dropdown-right">
-<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<a class="dropdown-toggle" tabindex="0">分享本文</a>
 <ul class="menu share-menu">
     <!-- Share Weibo -->
     
     <li class="menu-item">
-        <a href="http://service.weibo.com/share/share.php?appkey=&title=开天辟地第一篇&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=开天辟地第一篇&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
     </li>
     
 
     <!-- Share Twitter -->
     
-    <li class="menu-item">
-        <a href="https://twitter.com/intent/tweet?text=开天辟地第一篇&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/&via=Azbomb" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
-    </li>
-    
 
     <!-- Share Facebook -->
-    
-    <li class="menu-item">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
-    </li>
     
 
     <!-- Share Google+ -->
     
-    <li class="menu-item">
-        <a href="https://plus.google.com/share?url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
-    </li>
-    
 
     <!-- Share LinkedIn -->
-    
-    <li class="menu-item">
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/&title=AzBomb的博客" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
-    </li>
     
 
     <!-- Share QQ -->
     
     <li class="menu-item">
-        <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=AzBomb的博客&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=AzBomb的博客&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
     </li>
     
 
     <!-- Share Telegram -->
-    
-    <li class="menu-item">
-        <a href="https://t.me/share/url?url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/&text=AzBomb的博客" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
-    </li>
     
 
     <!-- QRCode -->
@@ -445,7 +409,7 @@
                     
 
 
-    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
     <script>
     (function() {
         var dateUpdate = Date.parse("2022-10-18");
@@ -462,9 +426,9 @@
     </script>
 
 
-<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2022-10-06T13:37:58.000Z" itemprop="datePublished">2022-10-06</time>
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-10-06T13:37:58.000Z" itemprop="datePublished">2022-10-06</time>
 
-    , Updated at&nbsp;<time datetime="2022-10-18T09:15:49.284Z" itemprop="dateModified">2022-10-18</time>
+    , 最后修改于&nbsp;<time datetime="2022-10-18T09:15:49.284Z" itemprop="dateModified">2022-10-18</time>
 
 </p>
 <p class="post-footer-info mb-0 pt-2">
@@ -553,7 +517,17 @@ window.lazyLoadOptions = {
     elements_selector: ".lazyload",
     threshold: 50
 };
-document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2022;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
 console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
 
 </script>
