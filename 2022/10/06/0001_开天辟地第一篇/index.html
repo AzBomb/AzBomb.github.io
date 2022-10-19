@@ -1,400 +1,184 @@
 <!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
 
-<html lang="zh-CN">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        hexo-theme-suka © SukkaW
-        GitHub: https://github.com/SukkaW/hexo-theme-suka
-    -->
-
-    <!-- ### Resource Hint ### -->
-
-    <!-- ## DNS Prefetch ## -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-<!-- busuanzi -->
-
-    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
-
-
-<!-- comment -->
-
-
-
-
-
-
-
-<!-- analytics -->
-
-
-
-
-
-
-
-    <!-- ## Preload ## -->
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙" />
+  <meta name="author" content="Azbomb" />
+  <meta name="description" content="一个自动化人的随笔" />
+  
+  
+  <title>
     
-    <!-- Busuanzi -->
+      开天辟地第一篇 
+      
+      
+      |
     
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+     AzBomb的博客
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
 
 
+  
 
+  
 
-
-
-
-    <!-- ### Meta & Title & Info ### -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
-    <meta name="renderer" content="webkit">
-
-    <!-- Title -->
-    <title>开天辟地第一篇 | AzBomb的博客</title>
-
-    <!-- Favicons -->
-    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
-
-    <!-- ### Import File ### -->
-    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
-    body {
-        background-color: #f8f9fa;
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
     }
-
-    a, a:visited {
-        color: #0070ff;
-    }
-
-    a:active, a:focus, a:hover {
-        color: #0070ff;
-        opacity: .75;
-    }
-
-    #post-content a,
-    #post-content a:hover,
-    #post-content a:focus,
-    #post-content a:visited {
-        color: #005eb9;
-        opacity: 1;
-    }
-
-    
-
-    .post-entry .card-body a {
-        color: #0070ff;
-    }
-
-    .avatar {
-        background: #444;
-    }
-
-    .navbar-link,
-    .navbar-link:visited,
-    .timeline .timeline-item .timeline-icon.icon-lg {
-        color: #0070ff;
-    }
-
-    .navbar-link:hover {
-        color: #0070ff;
-        opacity: .8;
-    }
-
-    #search-input .btn,
-    #disqus_click_btn,
-    #disqus-switch-to-direct,
-    #disqus-loadmore-button {
-        background: #727e96;
-        border-color: #727e96;
-        color: #fff;
-    }
-
-    #post-toc a.post-toc-link,
-    #post-toc a.post-toc-link:visited,
-    .share-menu.menu .menu-item>a {
-        color: #727e96;
-    }
-
-    .share-menu.menu .menu-item>a:hover,
-    .share-menu.menu .menu-item>a:focus,
-    .share-menu.menu .menu-item>a:visited {
-        color: #50596c;
-        background: #f8f9fa;
-        opacity: .85;
-    }
-</style><link rel="stylesheet" href="/css/style.min.css">
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
-
-
-
-
-
-
-    <!-- Prettify Theme -->
-    
-    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
-
-
-
-
-
-<script>
-/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
-</script>
-
-    <!-- ### Site Verification ### -->
-    
-
-
-    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="AzBomb的博客"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="AzBomb的博客"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="search" type="application/opensearchdescription+xml" href="path/to/opensearch.xml" title="AzBomb的博客">
-
-    <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="开天辟地第一篇 | AzBomb的博客"><meta property="og:site_name" content="AzBomb的博客"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/"><meta property="og:locale" content="zh-CN"><meta name="description" content="欢迎来到 AzBomb的博客! 开篇为什么建站本人一名80后自动化小蚁，在自动化行业已十年有余，一直想写点行业相关的笔记与心得，分享给大家，由于种种原因，很长时间都没能实现。近期机缘巧合从 IT 朋友处了解到可以在 Github 上实现个人博客网站，还有资金投入几乎为零，只不过要学习怎么搭建网站。 好，从网上找资料，干就完了！ 感谢由于能力有限，用自控人的思想，开局能跑就 OK，等日后有了新技能和 - Azbomb - AzBomb的博客"><meta name="keywords" content="自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta property="article:published_time" content="2022-10-06T13:37:58.000Z"><meta property="article:modified_time" content="2022-10-18T09:15:49.284Z"><meta property="og:updated_time" content="2022-10-18T09:15:49.284Z"><meta property="article:author" content="Azbomb"><meta property="article:tag" content="自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙"><meta name="twitter:card" content="summary">
-
-    
-
-    <!-- ### Canonical link ### -->
-    <link rel="canonical" href="http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/">
-
-    <meta name="generator" content="Hexo 6.3.0">
-
-    <!-- ### Analytics ### -->
-    
-
-
-
-
-
-
-
-    <!-- ### Structured Data ### -->
-    
-
-
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "url": "http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/",
-    "@type": "BlogPosting",
-    "logo": "http://example.com/img/suka-favicon.ico",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/"
-    },
-    "headline": "开天辟地第一篇 | AzBomb的博客",
-    
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://example.com/img/suka-favicon.ico"
-    },
-    
-    "datePublished": "2022-10-06T13:37:58.000Z",
-    "dateModified": "2022-10-18T09:15:49.284Z",
-    "author": {
-        "@type": "Person",
-        "name": "Azbomb",
-        "image": {
-            "@type": "ImageObject",
-            "url": "http://example.com/img/default_avatar.png"
-        },
-        "description": "学好自动化，浪迹走天涯"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "AzBomb的博客",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "http://example.com/img/suka-favicon.ico"
-        }
-    },
-    
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "http://example.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-    },
-    
-    "keywords": "自动化,开篇, 自动化,西门子，罗克韦尔，施耐德，三菱，欧姆龙",
-    "description": "欢迎来到 AzBomb的博客! 开篇为什么建站本人一名80后自动化小蚁，在自动化行业已十年有余，一直想写点行业相关的笔记与心得，分享给大家，由于种种原因，很长时间都没能实现。近期机缘巧合从 IT 朋友处了解到可以在 Github 上实现个人博客网站，还有资金投入几乎为零，只不过要学习怎么搭建网站。 好，从网上找资料，干就完了！ 感谢由于能力有限，用自控人的思想，开局能跑就 OK，等日后有了新技能和 - Azbomb - AzBomb的博客"
-}
-</script>
-
-
-
-    <!-- ### Custom Head ### -->
-    
-</head>
-
-    <body>
-            
-
-            <!-- ### Main content ### -->
-            <!-- ## Header ##-->
-<header>
-    <h1 class="header-title text-center"><a href="/">AzBomb的博客</a></h1>
-
-    <p class="text-center header-slogan">
-        
-            
-                学好自动化，浪迹走天涯
-            
-        
-    </p>
-
-    <nav class="navbar-section text-center">
-    
-        <a href="/" class="navbar-link">首页</a>
-    
-    
-        <a href="/archives/" class="navbar-link">归档</a>
-    
-    
-        <a href="" class="navbar-link">搜索</a>
-    
-    
-        <a href="/about/" class="navbar-link">about</a>
-    
-        <a href="/tags/" class="navbar-link">tag</a>
-    
-    
-        <div class="dropdown dropdown-right">
-    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
-    <ul class="menu share-menu">
-
-        <!-- Share Weibo -->
-        
-        <li class="menu-item">
-            <a href="http://service.weibo.com/share/share.php?appkey=&title=AzBomb的博客&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.jpg" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">学好自动化，浪迹走天涯</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">主页</a>
         </li>
-        
-
-        <!-- Share Twitter -->
-        
-
-        <!-- Share Facebook -->
-        
-
-        <!-- Share Google+ -->
-        
-
-        <!-- Share LinkedIn -->
-        
-
-        <!-- Share QQ -->
-        
-        <li class="menu-item">
-            <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=开天辟地第一篇&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
         </li>
-        
-
-        <!-- Share Telegram -->
-        
-
-        <!-- QRCode -->
-        
-        <li class="menu-item">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAAAAAAYplnuAAACpUlEQVR42u3dy27CMBRF0fz/T9NRJQbxPfs4AQllZ1KqprCManxfUo/XD16HaNGiRT8QfQzX/8/P7n3//v2+1c/I700O0aIb9Okf/Qn6DJDABEkcokW36NWTrDbnuGGGhU4bNy1GtOg70AmeNjB5HtGiv4lOG5EcOlPQJFr0p9BToEICqXQPwd4W5Yl+PJoktt/4ens2LvqR6LoIGA6Y6fGUKHy0air6UegpSN9NWkkScFbIiW+KaNEAvYKskleygFXhMWHj64kWDdA7xZm0EJrEtoePaNENeto8EzI1ldrH4+YVLRqg24ODNDZJApsOsXgiihYNankpKaVDJquEgjaGlk0o0aIvoOkGSgMs7aE0voGiRUN0ahC1xZumyJiSatGir6BXsGkRNKingwFjI1S0aIDeGYqij5vBK1TUES26RNOAaWrEpyI7aeajRpFo0Rt9RHKo0OYmCfhjcCZadIFOA6tN0J4OFxJ8jcUa0aJh8zMVYUjzPRUgSZETFSBFiw71adIMIhuJHEapSCla9BU02TRtcZ0sZtrAy/tEiwbonQJNao6SBtRUoFzeL1p0iaaBUEp+yaG1kwyIFk3QbbO+GVyhQ1tpYEW06NeFWVNyQDSHBx1YRB8IokUDNPpQh42dJiFIG/dSEiBadHFI0EGsZqF4GFG06AKdEtXpYGmHTnYSCdGid9C0aE6GYJuhLDxkKFp0gaaDgqvFTQnFceESLbpFpys1Npvhk5QITxtbtGiKTpsgBTdVwAMCrfGNEC0aotMLp4Z8KsanwmNq9osWvYNuC5GkyUmbQtOHgGjRn0KTYaw0gNhsyjiFIFr0hX9usLORyHAgXbxo0TtoGhTtFMZTspAaTKJFt+gmaElDWbtFnduLNaIfi/6lS7Ro0aIfhP4DR64L6VFWBMsAAAAASUVORK5CYII=" alr="QRCode">
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
         </li>
-        
-
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
     </ul>
+  </div>
 </div>
-    
-    
-</nav>
-</header>
 
-            
-    <!-- ## Post ## -->
-    <div class="post-container">
-    <div id="post-card" class="card">
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">开天辟地第一篇</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2022-10-06 21:37:58
+        </span>
         
-        <div class="card-item-container">
-            <div class="card-inner-cell">
-                <!-- # Post Header Info # -->
-                <div class="card-header">
-                    
-    <h1 class="card-title h3 mb-2">开天辟地第一篇</h1>
-
-
-
-
-<div class="post-header-info">
-    <p class="post-header-info-left text-gray">
-        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Azbomb's Avatar">
-        <span>2022-10-06</span>
-        
-        
-            <!-- Busuanzi Post Views -->
-<span id="busuanzi_container_page_pv" hidden>
-    <span class="suka-devide-dot"></span>
-    <span></span>
-    <span id="busuanzi_value_page_pv"></span>
-    <span>Views</span>
-</span>
-        
-        
-    </p>
-    <div class="post-header-info-right">
-        
-            <div class="dropdown dropdown-right">
-<a class="dropdown-toggle" tabindex="0">分享本文</a>
-<ul class="menu share-menu">
-    <!-- Share Weibo -->
-    
-    <li class="menu-item">
-        <a href="http://service.weibo.com/share/share.php?appkey=&title=开天辟地第一篇&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
-    </li>
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-    <li class="menu-item">
-        <a href="http://connect.qq.com/widget/shareqq/index.html?site=AzBomb的博客&title=AzBomb的博客&summary=一个自动化人的随笔&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
-    </li>
-    
-
-    <!-- Share Telegram -->
-    
-
-    <!-- QRCode -->
-    
-    <li class="menu-item">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAAAAAAYplnuAAACpUlEQVR42u3dy27CMBRF0fz/T9NRJQbxPfs4AQllZ1KqprCManxfUo/XD16HaNGiRT8QfQzX/8/P7n3//v2+1c/I700O0aIb9Okf/Qn6DJDABEkcokW36NWTrDbnuGGGhU4bNy1GtOg70AmeNjB5HtGiv4lOG5EcOlPQJFr0p9BToEICqXQPwd4W5Yl+PJoktt/4ens2LvqR6LoIGA6Y6fGUKHy0air6UegpSN9NWkkScFbIiW+KaNEAvYKskleygFXhMWHj64kWDdA7xZm0EJrEtoePaNENeto8EzI1ldrH4+YVLRqg24ODNDZJApsOsXgiihYNankpKaVDJquEgjaGlk0o0aIvoOkGSgMs7aE0voGiRUN0ahC1xZumyJiSatGir6BXsGkRNKingwFjI1S0aIDeGYqij5vBK1TUES26RNOAaWrEpyI7aeajRpFo0Rt9RHKo0OYmCfhjcCZadIFOA6tN0J4OFxJ8jcUa0aJh8zMVYUjzPRUgSZETFSBFiw71adIMIhuJHEapSCla9BU02TRtcZ0sZtrAy/tEiwbonQJNao6SBtRUoFzeL1p0iaaBUEp+yaG1kwyIFk3QbbO+GVyhQ1tpYEW06NeFWVNyQDSHBx1YRB8IokUDNPpQh42dJiFIG/dSEiBadHFI0EGsZqF4GFG06AKdEtXpYGmHTnYSCdGid9C0aE6GYJuhLDxkKFp0gaaDgqvFTQnFceESLbpFpys1Npvhk5QITxtbtGiKTpsgBTdVwAMCrfGNEC0aotMLp4Z8KsanwmNq9osWvYNuC5GkyUmbQtOHgGjRn0KTYaw0gNhsyjiFIFr0hX9usLORyHAgXbxo0TtoGhTtFMZTspAaTKJFt+gmaElDWbtFnduLNaIfi/6lS7Ro0aIfhP4DR64L6VFWBMsAAAAASUVORK5CYII=" alt="QRCode">
-    </li>
-    
-
-</ul>
-</div>
-        
-    </div>
-</div>
-                </div>
-                <div class="card-body">
-                    
-                        
-                        
-                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BC%80%E7%AF%87"><span class="post-toc-number">1.</span> <span class="post-toc-text">开篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BB%BA%E7%AB%99"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">为什么建站</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">感谢</span></a></li></ol></li></ol></div>
-                        
-                    
-                    <article id="post-content">
-                        <p>欢迎来到 <a target="_blank" rel="noopener" href="https://github.com/AzBomb/AzBomb.github.io">AzBomb</a>的博客!</p>
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/AI/" title="AI">
+                    <b>#</b> AI
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96-%E5%BC%80%E7%AF%87/" title="自动化,开篇">
+                    #自动化,开篇
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>欢迎来到 <a target="_blank" rel="noopener" href="https://github.com/AzBomb/AzBomb.github.io">AzBomb</a>的博客!</p>
 <h2 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h2><h3 id="为什么建站"><a href="#为什么建站" class="headerlink" title="为什么建站"></a>为什么建站</h3><p>本人一名80后自动化小蚁，在自动化行业已十年有余，一直想写点行业相关的笔记与心得，分享给大家，由于种种原因，很长时间都没能实现。近期机缘巧合从 IT 朋友处了解到可以在 Github 上实现个人博客网站，还有资金投入几乎为零，只不过要学习怎么搭建网站。</p>
 <p>好，从网上找资料，干就完了！</p>
 <h3 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h3><p>由于能力有限，用自控人的思想，开局能跑就 OK，等日后有了新技能和丰富经验之后再完善。网站建设离不开大家的支持，在此感谢大神们的帮助和分享，有了你们无私奉献，才有了我这个小小博客。 </p>
@@ -405,147 +189,364 @@
 
 <p>ヾ(￣▽￣) Bye</p>
 
-                    </article>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2022-10-06 21:37:58
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
                     
-
-
-    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
-    <script>
-    (function() {
-        var dateUpdate = Date.parse("2022-10-18");
-        var nowDate = new Date();
-        var a = nowDate.getTime();
-        var b = a - dateUpdate;
-        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
-        if (daysUpdateExpire >= 120) {
-            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
-        } else {
-            document.getElementById('date-expire-notification').style.display = 'none';
-        }
-    })();
-    </script>
-
-
-<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-10-06T13:37:58.000Z" itemprop="datePublished">2022-10-06</time>
-
-    , 最后修改于&nbsp;<time datetime="2022-10-18T09:15:49.284Z" itemprop="dateModified">2022-10-18</time>
-
-</p>
-<p class="post-footer-info mb-0 pt-2">
-
-
-
-<span class="post-tags-list mt-2">
-
-<a class="post-tags-list-item" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96-%E5%BC%80%E7%AF%87/" rel="tag">#&nbsp;自动化,开篇</a>
-
-</span>
-
-
-</p>
-
-                </div>
-                <div class="post-nav px-2 bg-gray">
-<ul class="pagination">
-    <!-- Prev Nav -->
-    
-        <li class="page-item page-prev">
-            <a href="/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" rel="prev">
-                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
-                <div class="page-item-subtitle">怎样用 Github 和 Hexo 搭建个人网站</div>
-            </a>
-        </li>
-    
-
-    <!-- Next Nav -->
-    
-</ul>
-</div>
-
-                
-                    <!-- # Comment # -->
+                    <span class="span--category">
+                      <a href="/categories/AI/" title="AI">
+                        <b>#</b> AI
+                      </a>
+                    </span>
                     
-                
-            </div>
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96-%E5%BC%80%E7%AF%87/" title="自动化,开篇">
+                        #自动化,开篇
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2022/10/07/0002_%E6%80%8E%E6%A0%B7%E7%94%A8github%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
         </div>
+      
     </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E7%AF%87"><span class="toc-text">开篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BB%BA%E7%AB%99"><span class="toc-text">为什么建站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-text">感谢</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/AzBomb/AzBomb.github.io">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/AzBomb/AzBomb.github.io">Copyright © 2021-2022 AzBomb</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
 </div>
 
-            <!-- ### Footer ### -->
-            <footer class="text-center">
-    <!-- footer copyright -->
-    
-        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
-            <a class="footer-copyright-a" href="http://example.com">AzBomb的博客</a>
-        </p>
+      </div>
 
-    <!-- footer custom text -->
-    <p class="footer-text mb-0">
-    
-    </p>
-    <!-- footer develop info -->
-    <p class="footer-develop mb-0">
-        
-    <!-- Busuanzi User Views -->
-    <span id="busuanzi_container_site_uv" hidden>
-        <span></span>
-        <span id="busuanzi_value_site_uv"></span>
-        <span>Viewers</span>
-        
-            <span>|</span>
-        
-    </span>
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
 
+
+<script src="/js/backtotop.js"></script>
 
 
 
         
-        Powered by&nbsp;<!--
-         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
-         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
-    </p>
-</footer>
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
 
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
 
-        <!-- ### Import File ### -->
-        <!-- ### Footer JS Import ### -->
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
 
-<script>
-
-    
-window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 50
-};
-
-(function() {
-    var copyrightNow = new Date().getFullYear();
-    var copyrightContent = document.getElementById('copyright-year');
-    var copyrightSince = 2022;
-    if (copyrightSince === copyrightNow) {
-        copyrightContent.textContent = copyrightNow;
-    } else {
-        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
     }
-})();
-console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
 
-</script>
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
-    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
 
 
-<!-- Offset -->
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
 
 
 
 
-<!-- Comment -->
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F10%2F06%2F0001_%25E5%25BC%2580%25E5%25A4%25A9%25E8%25BE%259F%25E5%259C%25B0%25E7%25AC%25AC%25E4%25B8%2580%25E7%25AF%2587%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/10/06/0001_%E5%BC%80%E5%A4%A9%E8%BE%9F%E5%9C%B0%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
 
 
-<!-- ### Custom Footer ### -->
 
-    </body>
-
+      </div>
+    </div>
+  </body>
 </html>
