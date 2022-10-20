@@ -11,7 +11,7 @@
   
   <title>
     
-      Siemens博途项目调试笔记-PN分布式IO正常组态后重启网络连接失败 
+      Siemens 项目调试笔记 - PN 分布式 IO 掉线后的离奇经历 
       
       
       |
@@ -147,7 +147,7 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Siemens博途项目调试笔记-PN分布式IO正常组态后重启网络连接失败</div>
+      <div class="post-title">Siemens 项目调试笔记 - PN 分布式 IO 掉线后的离奇经历</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
@@ -190,33 +190,33 @@
           
       </div>
       <div class="markdown-body">
-        <p>欢迎来到 <a target="_blank" rel="noopener" href="https://github.com/AzBomb/AzBomb.github.io">AzBomb</a>的博客!</p>
+        <p>欢迎来到 <a target="_blank" rel="noopener" href="https://github.com/AzBomb/AzBomb.github.io">AzBomb</a> 的博客!</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>用过 Siemens 自动化系统的朋友都知道，由于它在国内强大的技术支持和市场占有率的，我们绝大部分项目所使用的自控品牌都是西家首选。近期由于种种原因，哪怕它的供货价格在不断上涨，供货周期也长得离谱，我们却任然绕不开它。这个有点扯远了，与本篇文章有点不搭边，下面谈谈近期遇到一个比较有意思的组态问题，很值得作为典型案例记录下来，问题现象呢很简单，问题最后的解决方法也很简单，但处理过程花了我们比较长时间，而且当时一度质疑到了整个系统的网络构架。</p>
-<h2 id="项目调试之故障现象"><a href="#项目调试之故障现象" class="headerlink" title="项目调试之故障现象"></a>项目调试之故障现象</h2><p>这个项目比较大，用的是 CPU 1518 4PN&#x2F;DP 作为主站，分布式 IO 也很多，有 300 多个 PN 节点。按照项目的功能和区域规划了 3 个 PN 段，用了 20 几个交换机，具体细节就不讲了，整个网络组态已基本组好在线稳定运行过一段时间。后面的事就是项目的调试等等，组态这块不再去关注了。</p>
+<h2 id="故障现象"><a href="#故障现象" class="headerlink" title="故障现象"></a>故障现象</h2><p>这个项目比较大，用的是 CPU 1518 4PN&#x2F;DP 作为主站，分布式 IO 也很多，有 300 多个 PN 节点。按照项目的功能和区域规划了 3 个 PN 段，用了 20 几个交换机，具体细节就不讲了，整个网络组态已基本组好在线稳定运行过一段时间。后面的事就是项目的调试等等，组态这块不再去关注了。</p>
 <p>突然有一天，同事找我，有个 IO 从站掉线了，一开始以为也没什么大事，这么多设备一两个掉线很正常，很容易就能解决。到现场先来个三板斧：换网线、ping IP、换网关，是不是熟悉的味道，但是失算了，依然与 CPU 通讯不上。这时我还抱有一丝希望，是不是哪个接口松了，或是哪根线没接好，又折腾了好久，依然不行。</p>
-<h2 id="项目调试之故障排查"><a href="#项目调试之故障排查" class="headerlink" title="项目调试之故障排查"></a>项目调试之故障排查</h2><p>难道网络不稳定、CUP的通讯负载太高、交换机的线路规划有问题？这一长串的问题快让我懵了，故障怎么去排查呢？三板斧不行，那用排除法试试，将此 IO 从站交换机上的设备网线先全部断开，只保留此问题 IO 设备连接，是不是能组态在线（如果不行的话，还要将 CPU 到此交换机只能单独连这个设备，从而排除其他网络干扰）？这次比较幸运，此交换机其他设备断开后，IO 从站终于能在线了。下面的办法，再将其他设备一个个连上，看是哪个设备与它冲突。当交换机设备全都插上后，冲突没出现，居然全部正常，对，没错，所有设备又能与 CPU 正常通讯（包含那个 IO 从站）。</p>
+<h2 id="故障排查"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查</h2><p>难道网络不稳定、CUP的通讯负载太高、交换机的线路规划有问题？这一长串的问题快让我懵了，故障怎么去排查呢？三板斧不行，那用排除法试试，将此 IO 从站交换机上的设备网线先全部断开，只保留此问题 IO 设备连接，是不是能组态在线（如果不行的话，还要将 CPU 到此交换机只能单独连这个设备，从而排除其他网络干扰）？这次比较幸运，此交换机其他设备断开后，IO 从站终于能在线了。下面的办法，再将其他设备一个个连上，看是哪个设备与它冲突。当交换机设备全都插上后，冲突没出现，居然全部正常，对，没错，所有设备又能与 CPU 正常通讯（包含那个 IO 从站）。</p>
 <p>是不是故障解决了，不会再有问题了呢？秉着自控人一贯严谨作风，我们又将之前有问题的 IO 从站重启了一下，让人大跌眼镜的是 IO 从站没能与 CPU 通讯上，问题它又回来了。搞了半天似乎回到了原点，当时真的有点泄气了，现场调试也碰到过很多疑难杂症，从未遇到这种故障现象，当时感觉有点无从下手了。</p>
 <p>怪哉，怪哉！</p>
 <p>怎么办，这种故障往大了说可能是系统性的问题，如果是系统性问题那可是个大麻烦，就算不是大麻烦也要把当下的故障排除掉才能正常运行。</p>
-<h2 id="项目调试之寻找元凶"><a href="#项目调试之寻找元凶" class="headerlink" title="项目调试之寻找元凶"></a>项目调试之寻找元凶</h2><p>虽然故障排查又回到了原点，但我们又将之前的方法重复了几遍，现象是一模一样。断开其他设备后先是正常，重启问题 IO 从站又失败。至少这交换机上设备就是问题的所在，又不知试了多少次，终于排查到是其中一个触摸屏与此 IO 从站不能同时在线。具体现象就是，如果同时在线，或者先连触摸屏，IO 从站必定掉线；如果 IO 从站先连接后再连触摸屏，所有设备又都是正常的，且触摸屏也能与 CPU 正常通讯。是不是交换机问题？又一系列漫长操作后，确定此触摸屏与 IO 从站不管与哪个交换机相连，就是不能友好相处，两个设备杠上了。</p>
+<h2 id="寻找元凶"><a href="#寻找元凶" class="headerlink" title="寻找元凶"></a>寻找元凶</h2><p>虽然故障排查又回到了原点，但我们又将之前的方法重复了几遍，现象是一模一样。断开其他设备后先是正常，重启问题 IO 从站又失败。至少这交换机上设备就是问题的所在，又不知试了多少次，终于排查到是其中一个触摸屏与此 IO 从站不能同时在线。具体现象就是，如果同时在线，或者先连触摸屏，IO 从站必定掉线；如果 IO 从站先连接后再连触摸屏，所有设备又都是正常的，且触摸屏也能与 CPU 正常通讯。是不是交换机问题？又一系列漫长操作后，确定此触摸屏与 IO 从站不管与哪个交换机相连，就是不能友好相处，两个设备杠上了。</p>
 <p>终于从一脸懵逼进入了一筹莫展，迎来了新的僵局。虽然能找出故障相关设备，但找不出问题具体原因所在，就不能彻底处理这个故障。到此为了排查这个故障，又去找了个新触摸屏，设置好参数，连上网线，故障消失了。难道是触摸屏问题？但是新触摸屏还没下载相应项目，下载好之前触摸屏项目后，问题它又重现了。与软件项目有关？这是我们所料未及的，一般此类故障都是与硬件或参数有关系，与软件项目从未遇到过。</p>
 <p>离奇，真是太离奇了，我又一次不知所措了。经过一番思考和推断，出现这种故障，项目软件就算有问题，也应先从网络参数冲突开始排查，PN设备名称、IP地址、MAC地址这三个要一一核对排查。又开始了一系列的操作，功夫不负有心人，当我用博途软件从网卡扫描到设备网络参数时真相终于大白，请看两幅截图：</p>
-<p><img src="/../img/0003/a11_hmi.jpg"></p>
+<p><img src="/../img/0003/a11_hmi_.jpg"></p>
 <blockquote>
 <p>图片来自 博途项目 截图</p>
 </blockquote>
-<p><img src="/../img/0003/a11_im.jpg"></p>
+<p><img src="/../img/0003/a11_im_.jpg"></p>
 <blockquote>
 <p>图片来自 博途项目 截图</p>
 </blockquote>
 <p>大家此时也判断出什么原因了，触摸屏的 PN 设备名称与 IO 从站的设备名称同名冲突，设备名称都是“a11”，到此故障结症终于找到，处理也很简单，将触摸屏项目的 PN 原设备名称：“a11” 改掉即可。如下图所示：</p>
-<p><img src="/../img/0003/hmi_pn.jpg"></p>
+<p><img src="/../img/0003/hmi_pn_.jpg"></p>
 <blockquote>
 <p>图片来自 博途项目 截图</p>
 </blockquote>
-<h2 id="项目调试之问题分析"><a href="#项目调试之问题分析" class="headerlink" title="项目调试之问题分析"></a>项目调试之问题分析</h2><p>综前所述，其实这是个很简单的问题，处理起来也很简单。那为什么此次排查过程这么曲折而又反复呢？如果是个小项目是不会出现这个问题的，在同一个项目里，PN 设备名称系统是自动识别的，不可能出现这样的状况，就算小概率出现也能很快找到问题所在；原因就是这项目比较大，设备多，要额外考虑很多复杂因素，再加上之前稳定运行过一段时间，触摸屏项目是之后下载运行，且屏和 CPU 没在一个项目组态里，一开始根本不会往这方面去想，就给排查带来了很多困难。</p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>综前所述，其实这是个很简单的问题，处理起来也很简单。那为什么此次排查过程这么曲折而又反复呢？如果是个小项目是不会出现这个问题的，在同一个项目里，PN 设备名称系统是自动识别的，不可能出现这样的状况，就算小概率出现也能很快找到问题所在；原因就是这项目比较大，设备多，要额外考虑很多复杂因素，再加上之前稳定运行过一段时间，触摸屏项目是之后下载运行，且屏和 CPU 没在一个项目组态里，一开始根本不会往这方面去想，就给排查带来了很多困难。</p>
 <p>Siemens 博途的网络组态从站通讯方式是 CPU 先用设备名称来查找设备从站，查找到设备后再将 IP 地址分配给从站，从站获取到 IP 地址后就可以与 CPU 正常通讯了；所以 Siemens 博途的设备从站每次重启后 IP 地址位为空，要等 CPU 给它重新分配后才有属于自己的 IP。触摸屏的手动设置 IP 地址不需要CPU分配，且重启后 IP 地址是永久保存再设备中不会消失（除非选用DHCP模式），有兴趣的朋友可以自己验证一下。如果同一个网段有重名的设备名称当然就会出现网络异常啦。其实如果先下载触摸屏项目后组态 IO 从站分配设备名称博途是会提示重名失败，但反过来，后下载触摸屏的话就不会提示重名，因为项目下载用的是IP地址，不去识别设备名称。严格一点话这也算是 Siemens 博途的一个小 bug。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这个看似简单问题的排查，其实过程中动用了很多资源，也少不了同事们的帮助和分析。正是有大家帮助和提点，才有这次有趣且印象深刻的经历。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这个看似简单问题的排查，其实过程中动用了很多资源，也少不了同事们的帮助和分析。正是有大家帮助和提点，才有了这次有趣且印象深刻的经历。</p>
 <p>在此感谢大家的支持！</p>
 
       </div>
@@ -285,7 +285,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-text">项目调试之故障现象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"><span class="toc-text">项目调试之故障排查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E5%AF%BB%E6%89%BE%E5%85%83%E5%87%B6"><span class="toc-text">项目调试之寻找元凶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">项目调试之问题分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-text">故障现象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"><span class="toc-text">故障排查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E5%85%83%E5%87%B6"><span class="toc-text">寻找元凶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol>
       
     </div>
   </div>
@@ -571,12 +571,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Siemens%E5%8D%9A%E9%80%94%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0-PN%E5%88%86%E5%B8%83%E5%BC%8FIO%E6%AD%A3%E5%B8%B8%E7%BB%84%E6%80%81%E5%90%8E%E9%87%8D%E5%90%AF%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F10%2F19%2F0003_Siemens%25E5%258D%259A%25E9%2580%2594%25E9%25A1%25B9%25E7%259B%25AE%25E8%25B0%2583%25E8%25AF%2595%25E7%25AC%2594%25E8%25AE%25B0-PN%25E5%2588%2586%25E5%25B8%2583%25E5%25BC%258FIO%25E7%25BB%2584%25E6%2580%2581%25E6%25AD%25A3%25E5%25B8%25B8%25E5%2590%258E%25E5%2586%258D%25E9%2587%258D%25E5%2590%25AF%25E7%25BD%2591%25E7%25BB%259C%25E6%2597%25A0%25E6%25B3%2595%25E8%25BF%259E%25E6%258E%25A5%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Siemens%20%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0%20-%20PN%20%E5%88%86%E5%B8%83%E5%BC%8F%20IO%20%E6%8E%89%E7%BA%BF%E5%90%8E%E7%9A%84%E7%A6%BB%E5%A5%87%E7%BB%8F%E5%8E%86 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F10%2F19%2F0003_Siemens%25E9%25A1%25B9%25E7%259B%25AE%25E8%25B0%2583%25E8%25AF%2595%25E7%25AC%2594%25E8%25AE%25B0-PN%25E5%2588%2586%25E5%25B8%2583%25E5%25BC%258FIO%25E6%258E%2589%25E7%25BA%25BF%25E5%2590%258E%25E7%259A%2584%25E7%25A6%25BB%25E5%25A5%2587%25E7%25BB%258F%25E5%258E%2586%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/10/19/0003_Siemens%E5%8D%9A%E9%80%94%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0-PN%E5%88%86%E5%B8%83%E5%BC%8FIO%E7%BB%84%E6%80%81%E6%AD%A3%E5%B8%B8%E5%90%8E%E5%86%8D%E9%87%8D%E5%90%AF%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/10/19/0003_Siemens%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0-PN%E5%88%86%E5%B8%83%E5%BC%8FIO%E6%8E%89%E7%BA%BF%E5%90%8E%E7%9A%84%E7%A6%BB%E5%A5%87%E7%BB%8F%E5%8E%86/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
